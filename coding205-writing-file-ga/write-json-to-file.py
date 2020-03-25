@@ -65,7 +65,7 @@ get_devices_response = requests.get(get_devices_url, headers=header, verify=Fals
 # The json method of the response object returned by requests.get returns the request body in json format
 get_devices_json = get_devices_response.json()
 
-#Now let's read and display some specific information from the json
+#Now let's read and display some specific information from the json making some comment changes
 
 # set our parent as the top level response object
 parent =  get_devices_json["response"]
