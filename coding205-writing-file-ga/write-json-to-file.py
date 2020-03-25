@@ -72,7 +72,7 @@ parent =  get_devices_json["response"]
 
 print ("Devices = ")
 # you can open the file using 'with'.
-# 'with' gives you better exception handling and when you use 'with' the file automatically be closed
+# 'with' gives you better exception handling and when you use 'with' the file automatically be closed chnage here!!
 with open("list-of-devices.txt", "w") as file:
     # for each device returned, write the networkDeviceId and type value to the file
     for item in parent:
