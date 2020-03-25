@@ -58,3 +58,7 @@ target/
 
 # Jetbrains IDE files
 .idea
+
+
+/venv
+.python-version
