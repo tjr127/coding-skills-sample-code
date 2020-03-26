@@ -27,6 +27,10 @@
 
 # import logging module
 import logging
+import os
+
+#change working directory as VS Code musses with it
+os.chdir("/home/tjr127/projects/coding-skills-sample-code/coding206-logging")
 
 # specify that we want to log to a file named mylog.log and that we want to track messages at the DEBUG level
 logging.basicConfig(filename='mylog.log',level=logging.DEBUG)

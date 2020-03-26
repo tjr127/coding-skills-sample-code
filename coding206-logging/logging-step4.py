@@ -28,6 +28,11 @@
 #import the logging module
 import logging
 
+import os
+
+#change working directory as VS Code musses with it
+os.chdir("/home/tjr127/projects/coding-skills-sample-code/coding206-logging")
+
 # specify to log to a file, specify the format for the message and the date format and the logging level
 logging.basicConfig(filename='mylog.log',format='%(asctime)s %(levelname)s: %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 
