@@ -29,8 +29,13 @@
 # Pass in the name of the file to open and mode. 'r' for read only 'w' if you want to write to the file
 # To write to this file we will use "w"
 # If the file does not exist, it will be created.
+
+import os
+
+#change working directory as VS Code musses with it
+os.chdir("/home/tjr127/projects/coding-skills-sample-code/coding205-writing-file-ga")
 my_file_object = open("my-new-file.txt", "w")
 
-my_file_object.write("The grey penguin flies at noon.")
+my_file_object.write("The grey penguin flies at noon\nthis is a new line")
 
 my_file_object.close()

@@ -29,6 +29,11 @@ import requests
 # and manipulating json.
 import json
 
+import os
+
+#change working directory as VS Code musses with it
+os.chdir("/home/tjr127/projects/coding-skills-sample-code/coding205-writing-file-ga")
+
 # All of our REST calls will use the url for the APIC EM Controller as the base URL
 # So lets define a variable for the controller IP or DNS so we don't have to keep typing it
 #controller_url = "https://sandboxapic.cisco.com"
@@ -45,6 +50,7 @@ header = {"content-type": "application/json"}
 
 #Performs a POST on the specified url to get the service ticket
 response= requests.post(ticket_url,data=json.dumps(payload), headers=header, verify=False)
+print(response)
 	
 #convert response to json format
 r_json=response.json()
@@ -75,7 +81,7 @@ print ("Devices = ")
 # 'with' gives you better exception handling and when you use 'with' the file automatically be closed chnage here!!
 with open("list-of-devices.txt", "w") as file:
     # for each device returned, write the networkDeviceId and type value to the file
-    for item in parent:
+    for item in get_devices_json["response"]:
         device="id = " + item["id"] + " type = " + item["type"]
         file.write (device + "\n")
         print(device)

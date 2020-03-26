@@ -1,3 +1,3 @@
-id = 2dc30cac-072e-4d67-9720-cc302d02695a type = Cisco Catalyst 2960C-8PC-L Switch
-id = 17184480-2617-42c3-b267-4fade5f794a9 type = Cisco 3500I Unified Access Point
-id = 3ab14801-5c88-477d-bbb5-0aca5e5ba840 type = Cisco Catalyst 29xx Stack-able Ethernet Switch
+id = 8dbd8068-1091-4cde-8cf5-d1b58dc5c9c7 type = Cisco Catalyst 2960C-8PC-L Switch
+id = cd6d9b24-839b-4d58-adfe-3fdf781e1782 type = Cisco 3500I Unified Access Point
+id = 26450a30-57d8-4b56-b8f1-6fc535d67645 type = Cisco Catalyst 29xx Stack-able Ethernet Switch

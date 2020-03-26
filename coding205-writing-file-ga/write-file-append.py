@@ -24,7 +24,10 @@
 # * OR ITS SUPPLIERS BE LIABLE FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES, LOST
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
+import os
 
+#change working directory as VS Code musses with it
+os.chdir("/home/tjr127/projects/coding-skills-sample-code/coding205-writing-file-ga")
 print ("Writing to file..")
 
 # you can open the file using 'with'.
@@ -36,6 +39,6 @@ with open("my-new-file2.txt", "w") as file:
 print ("Do some stuff outside of the with block")
 
 # open the file again and append some additional text
-with open("my-new-file2.txt", "w") as file:
+with open("my-new-file2.txt", "a") as file:
     file.write("Level up!\n")
     file.write("Go to developer.cisco.com and do more learning labs!")
