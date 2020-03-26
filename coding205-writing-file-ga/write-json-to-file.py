@@ -42,6 +42,7 @@ controller_url='https://devnetapi.cisco.com/sandbox/apic_em'
 
 #the username and password to access the APIC-EM Controller
 payload = {"username":"devnetuser","password":"Cisco123!"}
+print(json.dumps(payload))
 
 ticket_url = controller_url + "/api/v1/ticket"
 
@@ -75,6 +76,7 @@ get_devices_json = get_devices_response.json()
 
 # set our parent as the top level response object
 parent =  get_devices_json["response"]
+print(parent)
 
 print ("Devices = ")
 # you can open the file using 'with'.
