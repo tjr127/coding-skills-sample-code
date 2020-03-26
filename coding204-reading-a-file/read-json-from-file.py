@@ -29,6 +29,8 @@
 # and manipulating json.
 import json, os
 
+
+##Change the working environment to the local directory since VS Code messes it up. 
 os.chdir('/home/tjr127/projects/coding-skills-sample-code/coding204-reading-a-file')
 
 
@@ -40,6 +42,6 @@ with open('my-json.json') as file:
 # access values from the json and loop through devices and display the network device id
 i = 0
 for item in data["response"]:
-    print ("Network Device ID: " + data["response"][i]["networkDeviceId"])
+    print ("Network Device ID: " + data["response"][i]["networkDeviceId"] + "  Tag: " + data["response"][i]["tag"])
     i += 1
 
