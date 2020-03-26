@@ -24,7 +24,34 @@
 # * OR ITS SUPPLIERS BE LIABLE FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES, LOST
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
+from pathlib import Path
+import sys, os
+here = Path(__file__).parent.absolute()
+print(here)
+repository_root = (here / ".." ).resolve()
+print(repository_root)
+file_to_write = here / "my-file.txt"
+print(file_to_write)
 
+print("Path at terminal when executing this file")
+print(os.getcwd() + "\n")
+
+print("This file path, relative to os.getcwd()")
+print(__file__ + "\n")
+
+print("This file full path (following symlinks)")
+full_path = os.path.realpath(__file__)
+print(full_path + "\n")
+
+print("This file directory and name")
+path, filename = os.path.split(full_path)
+print(path + ' --> ' + filename + "\n")
+
+print("This file directory only")
+print(os.path.dirname(full_path))
+
+sys.path.insert(0, str(repository_root))
+sys.path.insert(0, str(here))
 
 # Use the open method to open a file
 # Pass in the name of the file to open and mode. 'r' for read only 'w' if you want to write to the file

@@ -24,6 +24,9 @@
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
 
+import os
+
+os.chdir('/home/tjr127/projects/coding-skills-sample-code/coding204-reading-a-file')
 # You can also loop through the lines and read each line in a loop.
 print ("Loop through and read each line")
 my_file_object = open("my-file.txt", "r")

@@ -23,10 +23,38 @@
 # * OR ITS SUPPLIERS BE LIABLE FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES, LOST
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
+from pathlib import Path
+import sys, os
+here = Path(__file__).parent.absolute()
+print(here)
+repository_root = (here / ".." ).resolve()
+print(repository_root)
+file_to_write = here / "my-file.txt"
+print(file_to_write)
 
+print("Path at terminal when executing this file")
+print(os.getcwd() + "\n")
+
+print("This file path, relative to os.getcwd()")
+print(__file__ + "\n")
+
+print("This file full path (following symlinks)")
+full_path = os.path.realpath(__file__)
+print(full_path + "\n")
+
+print("This file directory and name")
+path, filename = os.path.split(full_path)
+print(path + ' --> ' + filename + "\n")
+
+print("This file directory only")
+print(os.path.dirname(full_path))
+
+sys.path.insert(0, str(repository_root))
+sys.path.insert(0, str(here))
 #.readline() reads in only 1 line of the file at a time.
 print ("Read only the first line of the file:")
 my_file_object = open("my-file.txt", "r")
 print (my_file_object.readline())
 print ("\n")
+print (my_file_object.readline())
 my_file_object.close()
