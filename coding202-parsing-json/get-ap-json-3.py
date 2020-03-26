@@ -16,6 +16,6 @@ print(json_object)
 print(json.dumps(json_object, sort_keys=True, indent=4))
 access_points = json_object['accessPoints']
 for ap in access_points:
+    print(ap)
     print('Access Point: ' + ap['name'] + '\t mac: ' + ap['radioMacAddress'])
-
 response.close()
