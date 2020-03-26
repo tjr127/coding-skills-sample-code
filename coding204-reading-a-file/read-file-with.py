@@ -23,13 +23,15 @@
 # * OR ITS SUPPLIERS BE LIABLE FOR ANY INCIDENTAL OR CONSEQUENTIAL DAMAGES, LOST
 # * PROFITS, OR LOST DATA, OR ANY OTHER INDIRECT DAMAGES EVEN IF CISCO OR ITS
 # * SUPPLIERS HAVE BEEN INFORMED OF THE POSSIBILITY THEREOF.-->
+import os
 
+os.chdir('/home/tjr127/projects/coding-skills-sample-code/coding204-reading-a-file')
 print ("Loop through and read each line using with to open the file")
 x=1
 
 # you can open the file using 'with'.
 # 'with' gives you better exception handling and when you use 'with' the file automatically be closed
-with open("my-file.txt") as file:
+with open("my-file.txt","r") as file:
     for line in file:
         print ("Line " + str(x) + ": " + line)
         x += 1

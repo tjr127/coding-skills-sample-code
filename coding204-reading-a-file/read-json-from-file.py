@@ -27,12 +27,15 @@
 
 # import the json library.  This library provides many handy features for formatting, displaying
 # and manipulating json.
-import json
+import json, os
+
+os.chdir('/home/tjr127/projects/coding-skills-sample-code/coding204-reading-a-file')
+
 
 # use 'with" to open the file containing json
 with open('my-json.json') as file:
     # read the whole file
-    data = json.loads(file.read())
+    data = json.loads(file.read()) 
     
 # access values from the json and loop through devices and display the network device id
 i = 0
